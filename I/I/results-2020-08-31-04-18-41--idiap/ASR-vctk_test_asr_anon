@@ -1,0 +1,2 @@
+%WER 23.31 [ 20200 / 86642, 1721 ins, 3521 del, 14958 sub ] exp/models/asr_eval/decode_vctk_test_asr_anon_tgsmall/wer_16_0.0
+%WER 18.93 [ 16401 / 86642, 1846 ins, 2273 del, 12282 sub ] exp/models/asr_eval/decode_vctk_test_asr_anon_tglarge/wer_16_0.0
