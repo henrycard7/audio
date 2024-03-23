@@ -1,4 +1,52 @@
-<audio controls>
-  <source src="p225_001_mic2.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <div id="audio-player"></div>
+
+    <script>
+        // Function to create and append audio player
+        function createAudioPlayer(audioSrc) {
+            var audioPlayer = document.createElement('audio');
+            audioPlayer.controls = true;
+            var source = document.createElement('source');
+            source.src = audioSrc;
+            source.type = 'audio/wav'; // Adjust type as necessary (e.g., audio/mpeg for MP3)
+            audioPlayer.appendChild(source);
+            document.getElementById('audio-player').appendChild(audioPlayer);
+        }
+
+        // Function to extract directory information from URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Define the directory structure and audio files
+        var audioFiles = {
+            'directory1': 'audio1.wav',
+            'directory2': 'audio2.wav',
+            // Add more directories and corresponding audio files as needed
+        };
+
+        // Get directory parameter from URL
+        var directoryParam = getParameterByName('directory');
+
+        // Load audio based on the directory parameter
+        if (directoryParam && audioFiles[directoryParam]) {
+            createAudioPlayer(audioFiles[directoryParam]);
+        } else {
+            console.error('Directory parameter not specified or audio file not found.');
+        }
+    </script>
+</body>
+</html>
