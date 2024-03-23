@@ -1,2 +1,0 @@
-%WER 21.98 [ 19044 / 86627, 1608 ins, 3234 del, 14202 sub ] exp/models/asr_eval/decode_vctk_dev_asr_anon_tgsmall/wer_17_0.0
-%WER 18.24 [ 15804 / 86627, 1918 ins, 2019 del, 11867 sub ] exp/models/asr_eval/decode_vctk_dev_asr_anon_tglarge/wer_16_0.0

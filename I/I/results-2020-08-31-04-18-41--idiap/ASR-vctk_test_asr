@@ -1,2 +1,0 @@
-%WER 16.39 [ 14201 / 86642, 1326 ins, 2245 del, 10630 sub ] exp/models/asr_eval/decode_vctk_test_asr_tgsmall/wer_14_0.0
-%WER 12.80 [ 11094 / 86642, 1263 ins, 1513 del, 8318 sub ] exp/models/asr_eval/decode_vctk_test_asr_tglarge/wer_15_0.0
